@@ -23,22 +23,3 @@ int main(){
 
     return 0;
 }
-
-//constructor copia
-N::N(N & old) {
-    reset();
-    copy_data(_a, old._a);
-    copy_data(_b, old._b);
-    copy_data(_c, old._c);
-    copy_data(_d, old._d);
-}
-
-//constructor de movimiento
-N::N(N && old) {
-    reset();
-    _a = std::move(old._a);
-    _b = std::move(old._b);
-    _c = std::move(old._c);
-    _d = std::move(old._d);
-    old.reset
-}
